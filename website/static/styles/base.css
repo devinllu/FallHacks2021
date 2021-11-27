@@ -1,0 +1,19 @@
+.center {
+    color: red;
+    /* position: absolute; */
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.giveButton {
+    top: 85vh;
+}
+
+.getButton {
+    top: 95vh;
+}
