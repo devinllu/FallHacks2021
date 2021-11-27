@@ -1,7 +1,0 @@
-.center {
-    position: absolute;
-    top: 15vh;
-    left: 50%;
-    transform: translateX(-50%);
-    color: red;
-}
