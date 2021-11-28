@@ -6,26 +6,34 @@
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">    
     </head>
     <body>
-        <div class="col text-center">
 
-            <h1 class="center text-center">
-                Give 'n Get
-            </h1>
-            <img src="https://images.pexels.com/photos/9532326/pexels-photo-9532326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            style="width:500px;height:600px;">
-            <br>
 
-        <!-- <h1>I want to:</h1> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Give N' Get</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/listings">Listings</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            </div>
+        </div>
+        </nav>
+    
+        <div class="container col">
 
-        <a type="button" class="btn btn-primary  btn-block w-50 ml-3 buttons giveButton" onclick="handleGive()" href="/listings">Give</a>
-
-        <a type="button" class="btn btn-primary btn-block w-50 ml-3 buttons getButton" onclick="handleGet()">Get</a>
-          <!-- <button class="text-center ml-3">Give</button>
-          <button class="text-center mt-2">Get</button> -->
-
-          <br>
-          <!-- <input class="text-center mt-2"> -->
-          <br>
+            <h1 class="text-center display-1 lead">Give N' Get</h1>
+            <img src="{{ url_for('static', filename='images/donation.jpg') }}" class="img-fluid" />
+            
         </div>
         <script src="{{url_for('static', filename='home.js')}}"></script>
         <!-- <script src="home.js"> </script> -->
