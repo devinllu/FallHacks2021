@@ -13,6 +13,16 @@ def index():
 def showListings():
   return render_template("/listings.html")
 
+@views.route("/tabular_listings")
+def listings():
+    users = User.query.all()
+
+    context = {
+        "users": users
+    }
+
+    return render_template("/table.html", context=context)
+
 @views.route("/create_listing", methods =["POST", "GET"])
 def postListings():
 
