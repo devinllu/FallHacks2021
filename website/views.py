@@ -10,3 +10,30 @@ def index():
 @views.route("/listings", methods =["GET", "POST"])
 def showListings():
   return render_template("/listings.html")
+
+@views.route("/create_listing", methods =["POST"])
+def postListings():
+
+  if request.method == "POST":
+  	email = request.form['input_email']
+  	phone = request.form['input_phone']
+  	fname = request.form['input_fname']
+  	lname = request.form['input_lname']
+  	title = request.form['input_title']
+  	location = request.form['input_location']
+  	description = request.form['input_desc']
+  	image = request.form['input_photo']
+
+  	poster = User(phone_number=phone, first_name=fname, last_name=lname, email=email)
+  	listing = Listings(phone, title, description, location)
+
+
+    with app.app_context():
+        exists = db.session.query(User.phone_number).filter_by(phone_number=entries.phone_number).first() is not None
+        if not exists:
+            db.session.add(entries)
+            db.session.commit()
+
+
+
+

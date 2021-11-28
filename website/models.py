@@ -22,9 +22,9 @@ class Listings(db.Model):
 	description = db.Column(db.String(512), nullable=False)
 	location = db.Column(db.String(1024), nullable=False)
 
-	def __init__(self, user, listing_id, title, description, location):
+	def __init__(self, user, title, description, location):
 		self.user = user
-		self.listing_id = listing_id
+		# self.listing_id = listing_id
 		self.title = title
 		self.description = description
 		self.location = location
