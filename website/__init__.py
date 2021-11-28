@@ -17,12 +17,19 @@ def create_app():
     app.register_blueprint(views, url_prefix='/')
     create_database(app)
     create_fake_data(app)
+    test_db(app)
     return app
 
 def create_database(app):
     if not path.exists('website/' + DB_NAME):
         db.create_all(app=app)
         print('Created Database!')
+
+def test_db(app):
+    with app.app_context():
+        users = User.query.all()
+
+        print(len(users))
 
 def create_fake_data(app):
     a1 = User(phone_number="6041902090", first_name="Devin", last_name="Lu", email="ludevinl@sfu.ca")

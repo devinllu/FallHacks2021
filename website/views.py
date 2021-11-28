@@ -17,14 +17,14 @@ def showListings():
 def postListings():
 
     if request.method == "POST":
-        email = request.form['input_email']
-        phone = request.form['input_phone']
-        fname = request.form['input_fname']
-        lname = request.form['input_lname']
-        title = request.form['input_title']
-        location = request.form['input_location']
-        description = request.form['input_desc']
-        image = request.form['input_photo']
+        email = request.form.get('input_email')
+        phone = request.form.get('input_phone')
+        fname = request.form.get('input_fname')
+        lname = request.form.get('input_lname')
+        title = request.form.get('input_title')
+        location = request.form.get('input_location')
+        description = request.form.get('input_desc')
+        image = request.form.get('input_photo')
 
         poster = User(phone_number=phone, first_name=fname, last_name=lname, email=email)
         listing = Listings(phone, title, description, location)
@@ -34,6 +34,7 @@ def postListings():
         if not user_exists:
             db.session.add(poster)
             db.session.commit()
+        return render_template("/listings.html")
 
     if request.method == "GET":
         return render_template("/create_listing.html")
