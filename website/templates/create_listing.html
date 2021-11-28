@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Name | Create listing</title>
+	      <meta charset="utf-8">
+	      <meta name="viewport" content="width=device-width, initial-scale=1">
+	      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	      <link rel="stylesheet" type="text/css" href="create_listing.css">
+	      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container-fluid w-75 h-100 rounded d-flex align-items-center">
+
+			<!-- create listing card -->
+			<div class="w-75 mx-auto bg-light rounded p-5">
+				<h4>Create listing details...</h4>
+				<div class="w-100">
+					<form>
+						<div class="row">
+						    <div class="form-group col-md-6">
+						      <input type="email" class="form-control" id="input_email" placeholder="email">
+						    </div>
+						    <div class="form-group col-md-6">
+						      <input type="tel" class="form-control" id="input_phone" placeholder="phone number">
+						    </div>
+					  	</div>
+					  	<div class="row">
+						    <div class="form-group col-md-6 pt-3">
+						      <input type="text" class="form-control" id="input_fname" placeholder="first name">
+						    </div>
+						    <div class="form-group col-md-6 pt-3">
+						      <input type="text" class="form-control" id="input_lname" placeholder="last name">
+						    </div>
+					  	</div>
+
+					  	<h5 class="pt-5">about the listing</h5>
+					  	<div class="row">
+						  	 <div class="form-group col-md-6">
+						      	<input type="text" class="form-control" id="input_title" placeholder="title">
+						    </div>
+						    <div class="form-group col-md-6">
+						    	<input type="text" class="form-control" id="input_location" placeholder="location">
+						    </div>
+					    </div>
+				
+						<textarea class="mt-3 form-control" id="input_desc" placeholder="description"></textarea>
+
+
+						<label class="mt-3" for="files">Select photos:</label>
+						<input class="form-control w-50" type="file" id="input_photo" name="files" accept="image/*">
+
+
+						<div class="text-center mt-5">
+							<button type="submit" class="btn btn-success">publish my listing</button>
+						</div>
+					</form>
+				</div>
+			</div>		
+		</div>
+	</body>
+</html>
