@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="card mx-auto w-75 my-5">
+            <h1 class="card-header card-title text-center display-4">Listings</h1>
+            <div class="card-body">
+                <table class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Listing</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in context.users %}
+                        <tr>
+                            <th scope="row">{{user.first_name}}</th>
+                            <td>{{user.last_name}}</td>
+                            <td>{{user.phone_number}}</td>
+                            <td>{{user.email}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+{% endblock %}

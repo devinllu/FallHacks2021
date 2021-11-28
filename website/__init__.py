@@ -32,15 +32,15 @@ def test_db(app):
         print(len(users))
 
 def create_fake_data(app):
-    a1 = User(phone_number="6041902090", first_name="Devin", last_name="Lu", email="ludevinl@sfu.ca")
-    a2 = User(phone_number="7781092903", first_name="Joe", last_name="LeTran", email="joe@sfu.ca")
-    a3 = User(phone_number="6041010923", first_name="John", last_name="Ko", email="john@sfu.ca")
-    a4 = User(phone_number="7781234567", first_name="Amelia", last_name="Abance", email="amelia@sfu.ca")
-    a5 = User(phone_number="6041234567", first_name="Curtis", last_name="Reyes", email="curtis@sfu.ca")
-    a6 = User(phone_number="7782134123", first_name="Jake", last_name="Lahsinia", email="jake@sfu.ca")
-    a7 = User(phone_number="6040192834", first_name="Jonathan", last_name="Lasagna", email="jonathan@sfu.ca")
-    a8 = User(phone_number="7781019212", first_name="Don", last_name="Doe", email="don@sfu.ca")
-    a9 = User(phone_number="7780987654", first_name="Amos", last_name="Love", email="amos@sfu.ca")
+    a1 = User(phone_number="6041902090", first_name="Devin", last_name="Carrot", email="Free Carrot! Contact Me")
+    a2 = User(phone_number="7781092903", first_name="Joe", last_name="Fridge", email="100kg Fridge")
+    a3 = User(phone_number="6041010923", first_name="John", last_name="Bike", email="10kg Bike")
+    a4 = User(phone_number="7781234567", first_name="Amelia", last_name="Slurpee", email="Chocolate Slurpee")
+    a5 = User(phone_number="6041234567", first_name="Curtis", last_name="Mask", email="FREE UBC MASK")
+    a6 = User(phone_number="7782134123", first_name="Jake", last_name="Couch", email="100kg Couch")
+    a7 = User(phone_number="6040192834", first_name="Jonathan", last_name="Chair", email="12kg Chair")
+    a8 = User(phone_number="7781019212", first_name="Don", last_name="Monitor", email="24-inch 128Hz Monitor")
+    a9 = User(phone_number="7780987654", first_name="Amos", last_name="Freezer", email="20kg Freezer")
 
     lst = [a1, a2, a3, a4, a5, a6, a7, a8, a9]
 
