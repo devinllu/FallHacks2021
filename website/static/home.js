@@ -1,7 +1,7 @@
 function handleGive() {
-    alert("givee!")
+    // alert("givee!")
 }
 
 function handleGet() {
-    alert("get!")
+    // alert("get!")
 }
