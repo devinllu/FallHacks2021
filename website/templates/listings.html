@@ -1,33 +1,18 @@
-<body>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/listings.css') }}">    </head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</body>
-<h1 class="text-center mt-3">Listings</h1>
-  <!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
+{% extends "base.html" %}
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/listings.css') }}">
+{% endblock %}
 
-<!-- Header -->
+{%block content%}
+<h1 class="text-center mt-3">Listings</h1>
+
 <div class="header" id="myHeader">
-  <!-- <button class="btn" onclick="one()">1</button>
-  <button class="btn active" onclick="two()">2</button>
-  <button class="btn" onclick="three()">3</button>
-  <button class="btn" onclick="four()">4</button> -->
 </div>
 
 <!-- Photo Grid -->
 <div class="row"> 
   <div class="column">
-    <!-- <img src="https://images.pexels.com/photos/9532326/pexels-photo-9532326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    style="width:350px;height:350px;" class="img">
-    <img src="https://images.pexels.com/photos/9532326/pexels-photo-9532326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    style="width:350px;height:350px;">
-    <img src="https://images.pexels.com/photos/9532326/pexels-photo-9532326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    style="width:350px;height:350px;">
-    <img src="https://images.pexels.com/photos/9532326/pexels-photo-9532326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    style="width:350px;height:350px;" class="img"> -->
     <img src="/w3images/underwater.jpg" style="width:100%">
     <img src="/w3images/ocean.jpg" style="width:100%">
     <img src="/w3images/wedding.jpg" style="width:100%">
@@ -104,7 +89,5 @@ for (var i = 0; i < btns.length; i++) {
 }
 three()
 </script>
-
-</body>
-</html>
+{% endblock %}
 

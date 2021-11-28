@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container col text-center">
+
+    <h1 class="text-center display-1 lead">Give N' Get</h1>
+    <img src="{{ url_for('static', filename='images/donation.jpg') }}" class="img-fluid" 
+    style="width: 950px; height: 600px;"/>
+
+    <a class="giveButton w-25" href="/create_listing">Give</a>
+    <br>
+    <a class="getButton w-25" href="/listings">Get</a>
+
+    
+</div>
+{% endblock %}

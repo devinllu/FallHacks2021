@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
     <head>
+        {% block head %}
         <!-- Bootstrap CSS --> 
         <link rel="stylesheet" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">    
+        {% endblock %}
     </head>
     <body>
 
@@ -18,7 +20,10 @@
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="/listings">Listings</a>
+                    <a class="nav-link active" href="/create_listing">Create Listings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/tabular_listings">Listings</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -29,13 +34,8 @@
         </div>
         </nav>
     
-        <div class="container col">
-
-            <h1 class="text-center display-1 lead">Give N' Get</h1>
-            <img src="{{ url_for('static', filename='images/donation.jpg') }}" class="img-fluid" />
-            
-        </div>
-        <script src="{{url_for('static', filename='home.js')}}"></script>
+        {% block content %}
+        {% endblock %}
         <!-- <script src="home.js"> </script> -->
     </body>
 </html>    
